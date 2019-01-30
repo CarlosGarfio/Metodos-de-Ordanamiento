@@ -1,15 +1,16 @@
 package metodosdeordenamiento;
 
-public class MetodosDeOrdenamiento {
+import Arreglo.Arreglo;
 
+public class MetodosDeOrdenamiento {
+    
     public static void main(String[] args) {
+        Arreglo arreglo = new Arreglo(3, 3);
         System.out.println("Metodos de ordenamiento.\n-------------------------");
-        System.out.println("Metodo Insercion(Garfio y Diana): "+Insercion());
+        System.out.println("Matriz generada:");
+        arreglo.print();
+        System.out.println("-------------------------");
+        System.out.println("Metodo Insercion(Garfio y Diana): "+arreglo.Insercion());
+        
     }
-    
-    public static long Insercion(){
-        System.currentTimeMillis();
-        return 0L;
-    }
-    
 }
