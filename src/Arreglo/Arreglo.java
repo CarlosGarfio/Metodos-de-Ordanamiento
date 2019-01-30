@@ -13,8 +13,7 @@ public class Arreglo {
     }
     
     public static long Insercion(){
-        System.currentTimeMillis();
-        return 0L;
+        return System.currentTimeMillis();
     }
     
     public void fill(int n, int m) {
