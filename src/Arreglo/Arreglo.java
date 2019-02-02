@@ -2,9 +2,9 @@ package Arreglo;
 
 public class Arreglo {
 
-    private int[] array;
-    private int ren, col;
-    private int data;
+    private static int[] array;
+    private static int ren, col;
+    private static int data;
     
     public Arreglo(int ren, int col) {
         this.ren = ren;
@@ -13,8 +13,20 @@ public class Arreglo {
     }
     
     public static long Insercion(){
+        int pos,aux;
+        for (int i = 0; i < array.length; i++) {
+            pos = i;
+            aux=array[i];
+            while ((pos > 0) && (array[pos-1] > aux)) {
+                array[pos]= array[pos-1];
+                pos--;
+            }
+            array[pos]=aux;
+        }
         return System.currentTimeMillis();
     }
+    
+    
     
     public void fill(int n, int m) {
         for (int i = 0; i < ren; i++) {
